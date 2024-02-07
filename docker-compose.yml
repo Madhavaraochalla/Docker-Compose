@@ -1,0 +1,12 @@
+---
+version: '3.8'
+services: 
+   myjen:
+     build: .
+     ports: 
+       - 5050:8080
+   mytom:
+     image: tomee
+     ports: 
+       - 6060:8080
+...

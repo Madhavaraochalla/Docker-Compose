@@ -1,0 +1,19 @@
+---
+version: '3.8'
+services:
+   mydb:
+     image: mysql:5
+     environment:
+         MYSQL_ROOT_PASSWORD: 
+     volumes:
+         - db:/var/lib/mysql
+   mywordpress:
+     image: wordpress
+     ports:
+         - 8888:80
+     volumes:
+       - wd:/var/www/html
+volumes:
+  db:
+  wd:
+...

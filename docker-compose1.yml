@@ -1,0 +1,18 @@
+---
+version: '3.8'
+services:
+   mydb:
+      image: postgres
+      environment:
+         POSTGRES_PASSWORD: madhav
+         POSTGRES_USER: madhav
+         POSTGRES_DB: mydb
+   myadminer:
+      image: adminer
+      ports:
+         - 9999:8080
+networks:
+   default:
+     external:
+         name: madhav
+...

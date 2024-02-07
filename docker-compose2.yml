@@ -1,0 +1,27 @@
+---
+version: '3.8'
+services:
+   myjenkins:
+      image: jenkins/jenkins
+      ports:
+        - 5050:8080
+      networks:
+            - abc
+   qaserver:
+      image: tomee
+      ports:
+         - 6060:8080
+      networks:
+        - xyz
+   prodserver:
+      image: tomee
+      ports:
+         - 7070:8080
+      networks:
+        - xyz
+
+networks:
+   abc: {}
+   xyz: {}
+
+...
